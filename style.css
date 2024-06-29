@@ -4,14 +4,18 @@
 
 #hero {
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     background-image: url('./hero.jpg');
     background-size: cover;
 }
 
-.center {
+#hero-content {
+    height: 100%;
     max-width: 1200px;
     margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -21,36 +25,40 @@ header {
     padding: 1em 0px;
 }
 
+#hero-body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 button {
     background-color: #F9C349;
     color: white;
     font-family: "Open Sans", sans-serif;
     font-size: 15px;
-    /* line-height: 15px; */
     letter-spacing: 1px;
     border: 0px;
     border-radius: 6px;
-    height: 45px;
     padding: 15px 28px;
 }
 
-#hero-content {
-    margin-top: 50px;
-}
-
-#hero-content > h2 {
+#hero-body > h2 {
+    box-sizing: content-box;
+    display: block;
+    float: none;
     color: #F8F7F3;
     text-align: right;
     font-family: 'Poppins', sans-serif;
     font-size: 2.625rem;
-    line-height: 1.3;
+    line-height: 1.3em;
+    flex-grow: 1;
 }
 
-#hero-content > .center-button {
-    margin-top: 50px;
-    text-align: center;
+#hero-body > .center-button {
+    margin: 0 auto;
+    flex-grow: 1;
 }
 
-#hero-content > button {
+#hero-body > .center-button > button {
     color: black;
 }
